@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pong</title>
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <h1>Pong</h1>
+      <div id="game"></div>
+      <!-- Rough-out your SVG mark-up here to start... -->
+
+	  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 256" width="600" height="400">
+
+		<rect  width="512" height="256" color="#353535"/>
+		
+		<rect width="8" height="56" x="494" y="100"  fill="white"/> //height-paddleheight%2 z
+		<rect width="8" height="56" x="10" y="100" fill="white"/>
+
+		<line stroke-dasharray="15, 10"    x1="256" y1="500" x2="256" y2="0" stroke="white"/>
+
+		<circle cx="255" cy="128" r="8" stroke="white" fill="white"/>
+	  </svg>
+	  </div>
+
+    <script type="text/javascript" src="build/bundle.js"></script>
+  </body>
+
+</html>
