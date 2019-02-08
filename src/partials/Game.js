@@ -1,4 +1,4 @@
-import { SVG_NS } from "../settings";
+import { SVG_NS, KEYS } from "../settings";
 import Board from "./Board";
 import Paddle from "./Paddle";
 
@@ -21,7 +21,9 @@ export default class Game {
       this.paddleWidth,
       this.paddleHeight,
       this.boardGap, //x position
-      (this.height - this.paddleHeight) / 2   //y position 
+      (this.height - this.paddleHeight) / 2,   //y position 
+      KEYS.a,
+      KEYS.z
 
     )
 
@@ -30,7 +32,9 @@ export default class Game {
       this.paddleWidth,
       this.paddleHeight,
       this.width - this.paddleWidth - this.boardGap, //x 
-      (this.height - this.paddleHeight) / 2
+      (this.height - this.paddleHeight) / 2,
+      KEYS.up,
+      KEYS.down
     )
 
   }
