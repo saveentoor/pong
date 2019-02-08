@@ -10,12 +10,12 @@ export default class Game {
     this.height = height;
 
     this.gameElement = document.getElementById(element);
+    this.ball = new Ball(8, this.width, this.height)
 
     this.paddleWidth = 8;
     this.paddleHeight = 56;
     this.boardGap = 10;
 
-    this.board = new Board(this.width, this.height);
 
     this.player1 = new Paddle(
       this.height,
@@ -38,9 +38,24 @@ export default class Game {
       KEYS.down
     )
 
+    this.board = new Board(this.width, this.height);
+    document.addEventListener('keytdown', event => {
+      if (event.key === KEYS.spaceBar) {
+        this.pause = !this.pause;
+
+      }
+
+    })
+
   }
 
   render() {
+    //pause game
+    if (this.pause) {
+      return;
+    }
+
+
     //empty out game elemment before re-rendering
     this.gameElement.innerHTML = "";
 
