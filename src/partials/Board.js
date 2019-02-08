@@ -9,7 +9,7 @@ export default class Board {
     let rect = document.createElementNS(SVG_NS, "rect");
     rect.setAttributeNS(null, "width", (this.width));
     rect.setAttributeNS(null, "height", (this.height));
-    rect.setAttributeNS(null, "fill", "black"); // look at num
+    rect.setAttributeNS(null, "fill", "black");
     // set.setAttributeNS(null, "stroke", #000000); //look at num
 
     let line = document.createElementNS(SVG_NS, "line");
@@ -18,7 +18,7 @@ export default class Board {
     line.setAttributeNS(null, "y1", "0");
     line.setAttributeNS(null, "x2", (this.width / 2));
     line.setAttributeNS(null, "y2", (this.height));
-    line.setAttributeNS(null, "stroke", "white"); //look at num
+    line.setAttributeNS(null, "stroke", "white");
     line.setAttributeNS(null, "stroke-dasharray", "20, 15");
     line.setAttributeNS(null, "stroke-width", "4");
 
