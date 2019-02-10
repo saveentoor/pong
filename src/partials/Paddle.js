@@ -58,5 +58,5 @@ export default class Paddle {
 
 
     }
-    //append to the parent SVG, same way as we dud for the board 
+    
 }

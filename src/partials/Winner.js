@@ -12,7 +12,7 @@ export default class Winner {
 
         let results = document.createElementNS(SVG_NS, 'text');
 
-        results.setAttributeNS(null, 'fill', 'blue');
+        results.setAttributeNS(null, 'fill', 'red');
         results.setAttributeNS(null, 'x', this.x);
         results.setAttributeNS(null, 'y', this.y);
         results.setAttributeNS(null, 'font-size', this.size);
@@ -22,3 +22,5 @@ export default class Winner {
         svg.appendChild(results);
     }
 }
+
+

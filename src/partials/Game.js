@@ -25,14 +25,15 @@ export default class Game {
     this.score1 = new Score(this.width / 2 - 50, 30, 30);
     this.score2 = new Score(this.width / 2 + 25, 30, 30);
 
-    this.winner = new Winner(20, 120, 50); //testing 
+    this.winner = new Winner(20, 120, 50);  
+    
 
     this.player1 = new Paddle(
       this.height,
       this.paddleWidth,
       this.paddleHeight,
-      this.boardGap, //x position
-      (this.height - this.paddleHeight) / 2,   //y position 
+      this.boardGap, 
+      (this.height - this.paddleHeight) / 2,    
       KEYS.a,
       KEYS.z
 
@@ -64,9 +65,7 @@ export default class Game {
     this.pause = true;
   }
 
-
   render() {
-    //pause game
     if (this.pause) {
       return;
     }
@@ -103,3 +102,5 @@ export default class Game {
 
   }
 }
+
+

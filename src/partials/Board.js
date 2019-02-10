@@ -10,7 +10,7 @@ export default class Board {
     rect.setAttributeNS(null, "width", (this.width));
     rect.setAttributeNS(null, "height", (this.height));
     rect.setAttributeNS(null, "fill", "black");
-    // set.setAttributeNS(null, "stroke", #000000); //look at num
+    
 
     let line = document.createElementNS(SVG_NS, "line");
 
@@ -25,8 +25,8 @@ export default class Board {
     svg.appendChild(rect);
     svg.appendChild(line);
 
-    //set all the line attributes
+    
 
-    //HOW DO WE ACTUALLY APPEND THIS THING INTO THE SVG GAME??
+    
   }
 }

@@ -16,7 +16,7 @@ export default class Score {
 
         scoreBoard.textContent = score;
 
-        // scoreBoard.innerHTML = score;
+        
         svg.appendChild(scoreBoard);
 
 

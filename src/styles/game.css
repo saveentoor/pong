@@ -64,10 +64,11 @@ table {
 
 /**
  * GAME
- */
+ */ 
 
 html {
   font-size: 16px;
+  background-color: #f7f731;
 }
 
 body {
@@ -77,10 +78,24 @@ body {
   height: 100vh;
   justify-content: center;
   width: 100%;
+  color: red;
+  
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4.5rem; 
   margin-bottom: 1rem; 
   text-align: center;
 }
+
+h2 {
+  font-size: 2.5rem; 
+  margin-top: 1rem;
+}
+
+.players {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+    

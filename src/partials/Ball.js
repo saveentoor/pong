@@ -40,7 +40,6 @@ export default class Ball {
 
     paddleCollision(player1, player2) {
         if (this.vx > 0) {
-            //detect player 2 collision
             let paddle = player2.coordinates(player2.x, player2.y, player2.width, player2.height);
             let { leftX, rightX, topY, bottomY } = paddle;
 
@@ -48,8 +47,7 @@ export default class Ball {
                 this.x + this.radius >= leftX
                 && this.y >= topY
                 && this.y <= bottomY
-                //first check is the right edge of the ball >= the left edge of the paddle 
-                //and is the ball, centerY >= top of the paddle and <= the bottom of the paddle 
+                
             ) {
                 this.vx = -this.vx;
                 this.ping.play();
@@ -57,11 +55,11 @@ export default class Ball {
 
         } else {
           
-            //detect player 1 collision
+            
             let paddle = player1.coordinates(player1.x, player1.y, player1.width, player1.height);
             let { leftX, rightX, topY, bottomY } = paddle;
 
-            //detect player 1 collision
+            
             if (
                 this.x - this.radius <= rightX
                 && this.y >= topY
@@ -91,14 +89,14 @@ export default class Ball {
 
         let circle = document.createElementNS(SVG_NS, 'circle');
         circle.setAttributeNS(null, 'r', this.radius);
-        circle.setAttributeNS(null, 'cx', this.x);  //x of the center point 
-        circle.setAttributeNS(null, 'cy', this.y); // of of the center point 
+        circle.setAttributeNS(null, 'cx', this.x);   
+        circle.setAttributeNS(null, 'cy', this.y); 
         circle.setAttributeNS(null, 'fill', 'white');
 
         svg.appendChild(circle);
 
 
-        //detect the goal
+        
         const rightGoal = this.x + this.radius >= this.boardWidth;
         const leftGoal = this.x - this.radius <= 0;
 
