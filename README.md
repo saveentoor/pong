@@ -1,6 +1,6 @@
 # Pong Game
 
-A basic pong game with two pong-balls. This game was built using vanilla Javascript with the graphics being rendered in SVG.
+A basic Pong game with two pong-balls. This game was built using vanilla Javascript, with the graphics being rendered in SVG.
 
 ## Setup
 
@@ -28,7 +28,7 @@ A basic pong game with two pong-balls. This game was built using vanilla Javascr
 
 Description:
 
-A basic Pong game with two pong-balls. This game is a two player game. The goal in this game is to block the two balls from entering your goal by using your paddle. First player to obtain 5 points is the winner. 
+A basic Pong game with two Pong-balls. This game is a two player game. The goal in this game is to block the two balls from entering your goal by using your paddle. First player to obtain 5 points is the winner. 
 
 Technology Used:
 
@@ -42,7 +42,7 @@ Built With:
 Visual Studio - Code Editor
 Webpack - task runner
 Git - Github
-Chrome - dev tools
+Chrome 
 
 
 

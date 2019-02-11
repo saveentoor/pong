@@ -6,28 +6,25 @@ import Ball from "./Ball";
 import Score from "./Score";
 import Winner from "./Winner";
 
-
 export default class Game {
-  constructor(element, width, height) {
+    constructor(element, width, height) {
     this.element = element;
     this.width = width;
     this.height = height;
 
     this.gameElement = document.getElementById(element);
-    this.ball1 = new Ball(12, this.width, this.height); //changed 8-12 for size of the ball
+    this.ball1 = new Ball(12, this.width, this.height);
     this.ball2 = new Ball(8, this.width, this.height);
 
     this.paddleWidth = 8;
     this.paddleHeight = 56;
     this.boardGap = 10;
 
-
     this.score1 = new Score(this.width / 2 - 50, 30, 30);
     this.score2 = new Score(this.width / 2 + 25, 30, 30);
 
     this.winner = new Winner(20, 120, 50);  
     
-
     this.player1 = new Paddle(
       this.height,
       this.paddleWidth,
@@ -36,7 +33,6 @@ export default class Game {
       (this.height - this.paddleHeight) / 2,    
       KEYS.a,
       KEYS.z
-
     )
 
     this.player2 = new Paddle(
@@ -53,25 +49,20 @@ export default class Game {
     document.addEventListener('keytdown', event => {
       if (event.key === KEYS.spaceBar) {
         this.pause = !this.pause;
-
       }
-
     })
-
   }
 
-  champion(svg, player) {
+    champion(svg, player) {
     this.winner.render(svg, `${player} Wins!`);
     this.pause = true;
   }
 
-  render() {
+    render() {
     if (this.pause) {
       return;
     }
 
-
-    //empty out game elemment before re-rendering
     this.gameElement.innerHTML = "";
 
     let svg = document.createElementNS(SVG_NS, "svg");
@@ -81,8 +72,6 @@ export default class Game {
     svg.setAttributeNS(null, "version", "1.1");
 
     this.gameElement.appendChild(svg);
-
-    //here we will render all game elemtns inside the SVG
     this.board.render(svg);
     this.player1.render(svg);
     this.player2.render(svg);
@@ -94,13 +83,10 @@ export default class Game {
     this.score2.render(svg, this.player2.score)
     this.winner.render(svg);
 
-    if (this.player1.score === 5) {   //testing if declaring a winner works
+    if (this.player1.score === 5) {
       this.champion(svg, 'Player 1')
     } else if (this.player2.score === 5) {
       this.champion(svg, 'Player 2')
     }
-
   }
 }
-
-

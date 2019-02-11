@@ -13,12 +13,8 @@ export default class Score {
         scoreBoard.setAttributeNS(null, 'font-family', 'Silkscreen Web', 'monotype');
         scoreBoard.setAttributeNS(null, 'font-size', this.size);
         scoreBoard.setAttributeNS(null, 'fill', 'whitesmoke');
-
-        scoreBoard.textContent = score;
-
         
+        scoreBoard.textContent = score;
         svg.appendChild(scoreBoard);
-
-
     }
 }
