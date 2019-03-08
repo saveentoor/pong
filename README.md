@@ -48,4 +48,4 @@ Chrome
 
 ### Screenshot
 
-![alt text](pong/screenshot.png)
+![alt text](screenshot.png)
