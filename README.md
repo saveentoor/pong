@@ -19,30 +19,33 @@ A basic Pong game with two pong-balls. This game was built using vanilla Javascr
 ## Keys
 
 **Player 1:**
-* a: up
-* z: down
+
+- a: up
+- z: down
 
 **Player 2:**
-* ▲ : up
-* ▼: down
 
-Description:
+- ▲ : up
+- ▼: down
 
-A basic Pong game with two Pong-balls. This game is a two player game. The goal in this game is to block the two balls from entering your goal by using your paddle. First player to obtain 5 points is the winner. 
+**Description:**
 
-Technology Used:
+A basic Pong game with two Pong-balls. This game is a two player game. The goal in this game is to block the two balls from entering your goal by using your paddle. First player to obtain 5 points is the winner.
+
+**Technology Used:**
 
 HTML5
 CSS3
 JavaScript
 SVG
 
-Built With:
+**Built With:**
 
 Visual Studio - Code Editor
 Webpack - task runner
 Git - Github
-Chrome 
+Chrome
 
+### Screenshot
 
-
+![alt text](pong/screenshot.png)
